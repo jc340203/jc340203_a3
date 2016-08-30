@@ -1,0 +1,148 @@
+
+
+<!DOCTYPE html> 
+
+<html>
+<head>
+<title>Registration Form</title>
+<link href="http://fonts.googleapis.com/css?family=Love+Ya+Like+A+Sister" rel="stylesheet" type="text/css">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<link href="main.css" rel="stylesheet">
+<link href="responsive.css" rel="stylesheet" media="screen and (max-width: 960px)">
+
+
+</head>
+<body style="background-color:#ffccff;">
+
+<body>
+<div class="wrapper">
+
+<header><h1>Baby clothing</h1></header>
+<nav>
+			<ul>
+			<li><a href="index.html">Home</a></li>
+			<li><a href="different wears.html">Different Wears</a></li>
+            		<li><a href="footwears.html">Footwears</a></li>
+            		<li><a href="Registration Form.html">Registration</a></li>
+			<li><a href="contact.html">Contact</a></li>
+			</ul>
+		
+		
+</nav>
+</div>
+<head>
+
+<meta charset="utf-8">
+<title>Registration</title>
+<script>
+function checkName(document) {
+	var name=document.getElementById("fname");
+	var name_msg=document.getElementById('name_msg');
+	if(name.value== "") {
+		name_msg.innerHTML="You did not enter a name. Please enter your name.";
+		name.focus();
+		return false;	
+	}
+	else {
+		name_msg.innerHTML="";	
+	}
+	return true;
+}
+
+function checkPassword(document) {
+	var pwd=document.getElementById("password");
+	var pwd_msg=document.getElementById("pwd_msg");
+	if(pwd.value== "") {
+		pwd_msg.innerHTML="You did not enter a password.  Please enter your password.";
+		pwd.focus();
+		return false;	
+	}
+	else {
+		pwd_msg.innerHTML= "";	
+	}
+	return true;
+}
+
+function checkRePassword(document) {
+	var pwd=document.getElementById("password");
+	var pwd_msg=document.getElementById('pwd_msg');
+	var repwd=document.getElementById("rePassword");
+	if(pwd.value != repwd.value) {
+		pwd_msg.innerHTML="The two passwords are not the same. Please re-enter both now.";
+		repwd.value= "";
+		pwd.focus();
+		return false;	
+	}
+	else {
+		pwd_msg.innerHTML= "";	
+	}
+	return true;
+}
+
+function checkZIPCode(document) {
+	var zip=document.getElementById("zip");
+	var zip_msg=document.getElementById("zip_msg");
+	var isNum= /^[0-9]{4}$/.test(zip.value);
+	if(!isNum) {
+		zip_msg.innerHTML="4 digits required. Please re-enter your postcode.";
+		zip.focus();
+		return false;	
+	}
+	else {
+		zip_msg.innerHTML= "";	
+	}
+	return true;
+}
+
+
+	function validateInfo(document) {
+		if(checkName(document) && checkPassword(document) && checkRePassword(document) && checkZIPCode(document) )
+		{
+			return true;	
+		}
+		return false;
+	}
+</script>
+
+
+</head>
+
+
+<div>
+  <form >
+    <table width="1100" border="0">
+      <tr>
+        <td align="left">
+          <form action="">
+            <h3> PLEASE ENTER YOUR PROFILE</h3>
+            <h4> Mark with * is compulsary</h4>
+  
+                 <p> * First Name:  <input type="text"><br></p>
+                 <p> * Password:    <input type="password"><br></p>
+        		 <p>* Address:     <input type="text"><br></p>
+    			 <p>* City:        <input type="text"><br></p>
+     			 <p>* State:       <input type="text"><br></p>
+    			 <p>* Country:     <input type="text"><br></p>
+    			 <p>* Postcode:    <input type="text"><br></p>
+    			 <p>* ContactNo:<input type="text"><br></p>
+     			 <p>* Email:<input type="text"></p>
+     	 </form>
+      </td>
+      <td align="left">
+     	 * Last Name:<input type="text"><br>
+      	 * Re-try:<input type="password">
+      </td> 
+     
+     </tr>
+ 
+</table>
+</form>
+<footer><h3>Stay one step ahead <br>
+SIGN UP for savings & new fashion</h3> 
+</footer>
+</div>
+</body>
+</html>
+
+
